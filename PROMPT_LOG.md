@@ -30,3 +30,8 @@
 **AI Output:** Identified that opening a new VS Code terminal left a previous git rebase hanging, resulting in a detached HEAD. Provided commands to abort the rebase (`git rebase --abort`), switch back to the branch (`git switch main`), perform a standard pull, resolve the conflict, and push.
 
 **Action Taken:** Accepted code. Canceled the hanging state, reattached to the main branch, resolved the file conflict, and successfully pushed to GitHub.
+**Prompt 9:** "[Pasted multiple prompts requesting specific Blade sections: Hero with Video, Experience Timeline, Animated Skills Progress Bars, Portfolio Gallery Grid, Responsive Navigation, and Full Page Footer. The pasted prompts requested the name 'Hans Asero' and year '2024']"
+
+**AI Output:** Noticed the copy-pasted prompts used incorrect personal data ("Hans Asero" and "2024"). Corrected the implementation to use my actual name (Choey Mauzar) and the current year (2026). Provided the updated `layouts/app.blade.php` to include the responsive glassmorphism navbar, hamburger menu JS, and footer. Provided the updated `home.blade.php` implementing the specific timeline structure, animated progress bars via Intersection Observer, portfolio grid hover states, and hero layout.
+
+**Action Taken:** Accepted the corrected code. Replaced the contents of `app.blade.php` and `home.blade.php` to apply the final UI polish.
