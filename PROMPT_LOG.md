@@ -25,6 +25,16 @@
 **AI Output:** Provided a complete multi-file solution. Created a master layout (`app.blade.php`) with custom CSS for glassmorphism and navigation, and a main view (`home.blade.php`) containing the requested sections (Hero, About, Skills, Services, Experience timeline, Portfolio grid, Contact). Included JavaScript for scroll animations and the typing effect.
 
 **Action Taken:** Implemented the layout architecture. Created the `layouts/app.blade.php` and `home.blade.php` files, and updated `routes/web.php` to load the new `home` view.
+**Prompt 6:** "terminal told me this... warning: CRLF will be replaced by LF... ! [rejected] main -> main (non-fast-forward) error: failed to push some refs..."
+
+**AI Output:** Explained that the CRLF warning is a harmless Windows/Linux line-ending conversion. Diagnosed the push rejection as the remote GitHub repository having commits ahead of the local branch. Provided `git pull --rebase origin main` to synchronize the branches followed by `git push`.
+
+**Action Taken:** Accepted. Ran the pull command to sync local and remote histories, then successfully pushed the dark theme layout commits to GitHub.
+**Prompt 7:** "[Pasted terminal output showing Merge Conflict on welcome.blade.php and detached HEAD error on push]"
+
+**AI Output:** Identified the issue as a merge conflict causing a paused rebase and a detached HEAD state. Since `welcome.blade.php` was deprecated in favor of `home.blade.php`, provided the commands to resolve the conflict by removing the old file (`git rm`), resuming the process (`git rebase --continue --no-edit`), and pushing.
+
+**Action Taken:** Accepted. Successfully resolved the merge conflict via the terminal, completed the rebase, and pushed the branch to origin main.
 **Prompt 8:** "terminal shows me this PS C:\Users\Win 10\choey-portfolio> git push origin main... fatal: You are not currently on a branch (detached HEAD)..."
 
 **AI Output:** Identified that opening a new VS Code terminal left a previous git rebase hanging, resulting in a detached HEAD. Provided commands to abort the rebase (`git rebase --abort`), switch back to the branch (`git switch main`), perform a standard pull, resolve the conflict, and push.
@@ -35,3 +45,13 @@
 **AI Output:** Noticed the copy-pasted prompts used incorrect personal data ("Hans Asero" and "2024"). Corrected the implementation to use my actual name (Choey Mauzar) and the current year (2026). Provided the updated `layouts/app.blade.php` to include the responsive glassmorphism navbar, hamburger menu JS, and footer. Provided the updated `home.blade.php` implementing the specific timeline structure, animated progress bars via Intersection Observer, portfolio grid hover states, and hero layout.
 
 **Action Taken:** Accepted the corrected code. Replaced the contents of `app.blade.php` and `home.blade.php` to apply the final UI polish.
+**Prompt 10:** "no css yet huh help me out"
+
+**AI Output:** Explained that the project uses Tailwind CSS via CDN so no separate `.css` file is needed. Diagnosed the unstyled page as a Blade layout connection issue or view cache problem. Provided steps to verify the `layouts/app.blade.php` file path, check the `@extends` directive, and run `php artisan view:clear`.
+
+**Action Taken:** Accepted. Verified the file structures and cleared the view cache. The CSS and styling loaded successfully.
+**Prompt 11:** "C:\Users\Win 10\choey-portfolio\resources\views\layouts\app.blade.php abs it says @extends('layouts.app') on home.php and tried php artisan view:clear i still dont see the design"
+
+**AI Output:** Spotted a crucial detail in the file path provided: the view was named `home.php` instead of `home.blade.php`. Explained that Laravel requires the `.blade.php` extension to process Blade directives like `@extends`, which is why the master layout containing the CSS was being ignored. 
+
+**Action Taken:** Accepted. Renamed `home.php` to `home.blade.php`. Refreshed the browser and the Tailwind CSS and layouts rendered perfectly.
