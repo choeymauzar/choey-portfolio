@@ -12,7 +12,7 @@
     <header class="bg-blue-900 text-white py-12">
         <div class="max-w-4xl mx-auto px-4 flex flex-col md:flex-row items-center gap-6">
             <!-- Replace src with your actual image path later (e.g., /images/profile.jpg) -->
-           <img src="{{ asset('images/profile.jpg') }}" 
+           <img src="{{ asset('images/profile.png') }}" 
      alt="Choey Morales Mauzar" 
      class="w-32 h-32 rounded-full border-4 border-white shadow-lg object-cover">
             <div>
