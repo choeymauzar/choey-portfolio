@@ -15,3 +15,8 @@
 **AI Output:** Provided the complete HTML structure utilizing Tailwind CSS via CDN. Included sections for Header, Contact, Education, Skills, and Certifications, pre-filled with my background details.
 
 **Action Taken:** Accepted code and replaced the default `welcome.blade.php` file. Tested locally using `php artisan serve`.
+**Prompt 4:** "yeah help me how to add profile picture and the path where can i upload it i tried but its bit difficult to put images using laravel though"
+
+**AI Output:** Explained the Laravel asset directory structure (`public/images/`) and provided the `{{ asset(...) }}` helper syntax with the `object-cover` Tailwind utility for proper image display.
+
+**Action Taken:** Created the `public/images` directory, placed the profile image, and updated `welcome.blade.php` using the `asset()` helper.
